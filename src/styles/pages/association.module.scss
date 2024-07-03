@@ -1,0 +1,23 @@
+.main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+
+  .img {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      border-radius: 20px;
+    }
+  }
+
+  p {
+    font: normal normal 300 20px/30px Overpass;
+    span {
+      font: normal normal bold 22px/30px Overpass;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  .btnSwitch {
+    display: flex;
+    gap: 0;
+    padding: 10px;
+
+    .btn {
+      background-color: rgb(115, 0, 255);
+      color: #FFF;
+      border: 1px solid #fff;
+      padding: 5px 20px;
+      width: 160px;
+      display: grid;
+      justify-content: center;
+      align-items: center; 
+      font-size: 22px;
+      margin-top: 20px;
+    }
+    
+    .btnActive {
+      background-color: #00012E;
+    }
+
+  }
+
+  .card {
+    color: #00012E; 
+    margin: 15px 5px 5px 10px;
+    border: 1px solid #9EA5B2;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+
+    h3 {
+      font: normal normal bold 20px/30px Overpass;
+    }
+    h5 {
+      font: normal normal 300 20px/30px Overpass;
+    }
+    a {
+      text-decoration: none;
+      color: #00012E; 
+    }
+  }
+}

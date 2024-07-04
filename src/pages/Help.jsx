@@ -1,9 +1,15 @@
-import React from 'react';
+import React from "react";
+import Asso from "../assets/Asso.png";
+import telAsso from "../assets/telAsso.png";
+import carteAsso from "../assets/carteAsso.png";
+import "./Help.css";
 
 export default function Help() {
   return (
-    <div>
-      <h1 className='text-center'>Help page</h1>
+    <div className="helpContainer">
+      <img className="helpAss" src={Asso} />
+      <img className="helpAss" src={telAsso} />{" "}
+      <img className="helpAss" src={carteAsso} />
     </div>
   );
 }

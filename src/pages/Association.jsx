@@ -3,8 +3,10 @@ import { useAppDispatch, useAppSelector } from "../stores/index";
 import { useParams } from "react-router-dom";
 import { getAssociation } from "../stores/associasion";
 import Icon from "@mdi/react";
-import { mdiPhoneClassic, mdiEmail } from "@mdi/js";
+import mdiPhoneClassic from "../assets/phone.png";
+import mdiEmail from "../assets/boite.png";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import vieille from "../assets/vielle.png";
 import "leaflet/dist/leaflet.css";
 import styles from "../styles/pages/association.module.scss";
 import L from "leaflet";
@@ -39,17 +41,21 @@ export default function Association() {
   return (
     <div className={"container " + styles.main}>
       <div className={styles.img}>
-        <img src="/images/img02.jpeg" width={300} height={300} />
+        <img src={vieille} width={300} height={300} />
       </div>
       <div className="p-3">
         <h1 className="my-3">{association?.nom}</h1>
         <p className="d-flex gap-3">
-          <Icon path={mdiPhoneClassic} size={2} />
+          <img className={styles.phone} src={mdiPhoneClassic} />
           <span className="mt-2">+33 4 65 43 78 54</span>
         </p>
         <p className="d-flex gap-3">
-          <Icon path={mdiEmail} size={2} />
-          <span>{`${association?.adresse}, ${association?.code_postal} ${association?.commune}`}</span>
+          <img src={mdiEmail} className={styles.phone} />
+          <span>
+            {`${association?.adresse}, `}
+            <br />
+            {`${association?.code_postal} ${association?.commune}`}
+          </span>
         </p>
         <p>{association?.presentation_resume}</p>
       </div>

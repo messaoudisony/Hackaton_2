@@ -29,7 +29,7 @@ export default function Search() {
   return (
     <div className={"container " + styles.main}>
       <select className="form-select" value={communeSelect} onChange={handleChange}>
-       <option value="">Sélectionner votre commune</option>
+       <option value="">Selectionnez votre commune</option>
        {communes?.map((commune, index) =>
        <option key={index} value={commune}>{commune}</option>
       )}

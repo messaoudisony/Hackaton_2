@@ -1,21 +1,31 @@
+import "./Home.css";
+import logoImage from "../assets/vieudetour1.png";
+import { useNavigate } from "react-router-dom";
 
-import styles from '../styles/pages/home.module.scss';
-import { useAppDispatch } from "../stores/index";
-import { DATA } from '../data/associations'
-import { useEffect } from "react";
-
-export default function Home() {
-
-  const dispatch = useAppDispatch();
- 
-  
-  return (   
-  <div className={"container " + styles.main}>
-   <img src="/images/img01.jpeg" width={300} height={300}/>
-   <h1 className="my-3">AIDE UN VIOQUE</h1>
-   <button>Button</button>
-   <button>Button</button>
-  </div>
-
-  )
+function Accueil() {
+  const navigate = useNavigate();
+  return (
+    <main className="accueil">
+      <div className="logo-container">
+        <img className="logo" src={logoImage} alt="logo" />
+      </div>
+      <h1 className="mainTitle">AIDE UN VIOQUE</h1>
+      <div className="button">
+        <button
+          onClick={() => {
+            navigate("/search");
+          }}
+          className="button1"
+          type="button"
+        >
+          Associations
+        </button>
+        <button className="button2" type="button">
+          Informations
+        </button>
+      </div>
+    </main>
+  );
 }
+
+export default Accueil;

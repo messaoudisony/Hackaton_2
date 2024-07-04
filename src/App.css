@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --primary-color: #f5f8fd;
+  --secondary-color: #5e72e4;
+  --back-color: white;
+}
+@font-face {
+  font-family: "luckiestGuy";
+  src: url("./assets/fonts/LuckiestGuy-Regular.ttf") format("truetype");
+}
+
+h1 {
+  font-family: "luckiestGuy";
+}
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+}
